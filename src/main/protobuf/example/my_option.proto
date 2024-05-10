@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example;
+
+import "google/protobuf/descriptor.proto";
+
+message ExampleFieldOptions {
+  bool foo = 1;
+}
+
+extend google.protobuf.FieldOptions {
+  optional ExampleFieldOptions field = 56789;
+}

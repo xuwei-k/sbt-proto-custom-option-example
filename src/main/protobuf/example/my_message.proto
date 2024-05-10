@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package example;
+
+import "example/my_option.proto";
+
+message MyMessage {
+  string x1 = 1 [(example.field).foo = true];
+  string x2 = 2 [(example.field).foo = false];
+  string x3 = 3;
+}
